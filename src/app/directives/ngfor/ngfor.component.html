@@ -1,0 +1,22 @@
+<h1>ngfor works!</h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">srno</th>
+        <th scope="col">ID/th>
+        <th scope="col">Languages</th>
+        <th scope="col">Edition</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr *ngFor="let subject of subjects.slice(3,6);let i = index" >
+        <td>{{i}}</td>
+        <td >{{subject.id}}</td>
+        <td >{{subject.language}}</td>
+        <td >{{subject.edition}}</td>
+      
+      </tr>
+    </tbody>
+  </table>
+  

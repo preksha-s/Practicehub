@@ -1,0 +1,24 @@
+.card{
+    margin:40px;
+    max-width: 30vw;
+    position: relative;
+    justify-items: center;
+    
+}
+.card-header{
+    background-color: rgb(111, 130, 131);
+    color: papayawhip;
+}
+.parent{
+    display: flex;
+    max-inline-size: max-content;
+    
+}
+
+.subbtn{
+  max-width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center
+ 
+}

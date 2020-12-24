@@ -1,0 +1,23 @@
+<h1>NgIF</h1>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">srno</th>
+        <th scope="col">UserID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr *ngFor="let employee of employees;let i = index" >
+        <td>{{i}}</td>
+        <td  *ngIf="employee.userId!==3">{{employee.userId}}</td>
+        <td  *ngIf="employee.userId!==3">{{employee.name}}</td>
+        <td  *ngIf="employee.userId!==3">{{employee.Age}}</td>
+      
+      </tr>
+    </tbody>
+  </table>
+  

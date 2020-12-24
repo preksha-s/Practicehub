@@ -1,0 +1,23 @@
+<h1>ngclass works!</h1>
+<!-- <p>ngfor works!</p> -->
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">srno</th>
+        <th scope="col">ID/th>
+        <th scope="col">Languages</th>
+        <th scope="col">Edition</th>
+      </tr>
+    </thead>
+    <tbody>
+       <!-- { 'text-success':true} -->
+      <tr *ngFor="let subject of subjects;let i = index" >
+        <td>{{i}}</td>
+        <td  [ngClass]="{'message': subject.id%2==0,'error':subject.id%3==0}">{{subject.id}}</td>
+        <td [ngClass]="{'message': subject.id%2==0,'error':subject.id%3==0}" >{{subject.language}}</td>
+        <td [ngClass]="{'message': subject.id%2==0,'error':subject.id%3==0}">{{subject.edition}}</td>
+      
+      </tr>
+    </tbody>
+  </table>
+  

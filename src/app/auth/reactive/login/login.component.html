@@ -1,0 +1,45 @@
+<p>reactive works!</p>
+<div class="container-fluid parent justify-content-center">
+    <div class="card">
+        <div class="card-header">
+          login
+        </div>
+        <div class="card-body">
+          <form name="loginForm">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label>
+                            Email
+                        </label>
+                        <input type="text" class="form-control" [formControl]="this.loginForm.controls['email']">
+                        <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+                            <small class="text-danger" *ngIf="loginForm.controls['email'].errors?.required">required field</small>
+                            <small class="text-danger" *ngIf="loginForm.controls['email'].errors?.minlength">minlength is 8 </small>
+                            <small class="text-danger" *ngIf="loginForm.controls['email'].hasError('invalidEmail')">name must be followed  by an @ and followed by any letters</small>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>
+                            Password
+                        </label>
+                        <input type="text" class="form-control" [formControl]="this.loginForm.controls['password']">
+                        <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['password'].touched">
+                            <small class="text-danger" *ngIf="loginForm.controls['password'].errors?.required">required field</small>
+                            <small class="text-danger" *ngIf="loginForm.controls['password'].errors?.minlength">minlength is 8 </small>
+                            <small class="text-danger" *ngIf="loginForm.controls['password'].hasError('invalidPassword')">atleast one capital letter followed by a small and number</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-md-12">
+                   <div class="col-md-6">
+                    <a (click)="onClickRegister()">click here to register</a>
+                   </div>
+                    <div class="col-md-6 label-right">
+                        <button class="btn btn-primary">login</button>
+                    </div>
+                </div>
+          </form>
+        </div>
+      </div>
+</div>
+<router-outlet></router-outlet>
